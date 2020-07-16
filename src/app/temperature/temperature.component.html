@@ -1,0 +1,11 @@
+<h3>Conversion of Temperature - Celsius to Fahrenheit and vice-versa</h3>
+<div class="temp">
+<mat-form-field class="example-full-width">  
+  <input matInput type="text" name="celsius" (ngModelChange)="celsiusChanged($event)" placeholder="Celsius (°C)	"
+     [(ngModel)]="cels"> 
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <input matInput type="text" name="fahrenheit" (ngModelChange)="fahrChanged( $event)" placeholder="Fahrenheit (°F)	"
+     [(ngModel)]="fahr">
+</mat-form-field>
+</div>

@@ -1,0 +1,138 @@
+<div class="main-head">
+<div>
+  <mat-form-field class="example-full-width">  
+    <input matInput type="text" name="dollar" (ngModelChange)="dollarChanged($event)" placeholder="USD - US dollar"
+       [(ngModel)]="dollar"> 
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="euro" (ngModelChange)="euroChanged( $event)" placeholder="Euro (EUR)"
+       [(ngModel)]="euro">
+  </mat-form-field>
+  <!-- great british pond -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="pond" (ngModelChange)="pondChanged( $event)" placeholder="Pound sterling (GBP)"
+       [(ngModel)]="pound">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="hec" (ngModelChange)="yenChanged( $event)" placeholder="Japanese yen (JPY)"
+       [(ngModel)]="japanYen">
+  </mat-form-field>
+</div>
+<div>
+    <!-- krone is the official currency of Denmark -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="krone" (ngModelChange)="kroneChanged( $event)" placeholder="Danish krone (DKK)"
+       [(ngModel)]="denKrone">
+  </mat-form-field>
+  <!-- The lev is the currency of Bulgaria. -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="len" (ngModelChange)="bulgChanged( $event)" placeholder="Bulgarian lev (BGN)"
+       [(ngModel)]="levBulgria">
+  </mat-form-field>
+  <!-- forint (sign: Ft; code: HUF) is the currency of Hungary. -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="forint" (ngModelChange)="hungaryChanged( $event)" placeholder="Hungarian forint (HUF)"
+       [(ngModel)]="forintHungary">
+  </mat-form-field>
+  <!-- The koruna (sign: Kč; code: CZK) is the currency of the Czech Republic -->
+  <mat-form-field class="example-full-width">
+      <input matInput type="text" name="Czech" (ngModelChange)="czechChanged( $event)" placeholder="Czech koruna (CZK)"
+         [(ngModel)]="czechRepublc">
+    </mat-form-field>
+</div>
+<div>
+    <!-- Zloty can be abbreviated to zl though PLN, the international symbol of the Polish currency, is widely used in Poland as well. -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="poland" (ngModelChange)="polandChanged( $event)" placeholder="Polish zloty (PLN)"
+       [(ngModel)]="poland">
+  </mat-form-field>
+  <!-- The krona is the official currency of Sweden -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="kronsym" (ngModelChange)="swedenChanged( $event)" placeholder="Swedish krona (SEK)"
+       [(ngModel)]="swedan">
+  </mat-form-field>
+  <!-- The franc is the currency and legal tender of Switzerland and Liechtenstein -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="franc" (ngModelChange)="swissChanged( $event)" placeholder="Swiss franc (CHF)"
+       [(ngModel)]="swiss">
+  </mat-form-field>
+  <!-- The króna (sign: kr; code: ISK) is the currency of Iceland. -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="ice" (ngModelChange)="icelndChanged( $event)" placeholder="Icelandic krona (ISK)"
+       [(ngModel)]="icelnd">
+  </mat-form-field>.
+</div>
+<div>
+    <!-- The krone [ˈkruːnə] (sign: kr; code: NOK), plural kroner, is the currency of Norway -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="norwy" (ngModelChange)="norwayChanged( $event)" placeholder="Norwegian krone (NOK)"
+       [(ngModel)]="norway">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="aust" (ngModelChange)="ausChanged( $event)" placeholder="Australian dollar (AUD)"
+       [(ngModel)]="australian">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="canada" (ngModelChange)="conadaChanged( $event)" placeholder="Canadian dollar (CAD)"
+       [(ngModel)]="canada">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="kong" (ngModelChange)="hongChanged( $event)" placeholder="Hong Kong dollar (HKD)"
+       [(ngModel)]="hongkong">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="kor" (ngModelChange)="koreanChanged( $event)" placeholder="South Korean won (KRW)"
+       [(ngModel)]="korean">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="newzlnd" (ngModelChange)="newzlndChanged( $event)" placeholder="New Zealand dollar (NZD)"
+       [(ngModel)]="newzlnd">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="sing" (ngModelChange)="singChanged( $event)" placeholder="Singapore dollar (SGD)"
+       [(ngModel)]="singapore">
+  </mat-form-field>
+  <!-- The rand (sign: R; code: ZAR) is the currency of South Africa.  -->
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="afri" (ngModelChange)="africnChanged( $event)" placeholder="South African rand (ZAR)"
+       [(ngModel)]="african">
+  </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="rupee" (ngModelChange)="INDChanged( $event)" placeholder="Indian Rupee (INR)"
+         [(ngModel)]="indian">
+    </mat-form-field>
+    <!-- currency of Romania -->
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="roman" (ngModelChange)="romaniaChanged( $event)" placeholder="Romanian Leu (RON)"
+         [(ngModel)]="romaniac">
+    </mat-form-field>
+    <!-- currency of Croatia -->
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="cro" (ngModelChange)="crotiaChanged( $event)" placeholder="Croatian Kuna(HRK)"
+         [(ngModel)]="crotia">
+    </mat-form-field>
+    <!-- The rand (sign: R; code: ZAR) is the currency of South Africa.  -->
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="russ" (ngModelChange)="russianChanged( $event)" placeholder="Russian Ruble (RUB)"
+         [(ngModel)]="russian">
+    </mat-form-field>
+  </div>
+
+</div>
+
+<div class="tbl">
+    <table id="customers">
+       <tr>
+         <th>name</th>
+         <th>symbol</th>
+       </tr>
+       <tr *ngFor="let i of ELEMENT_DATA">
+         <td>{{i.name}}</td>
+         <td>{{i.symbol}}</td>
+       </tr>
+     </table>
+   </div>

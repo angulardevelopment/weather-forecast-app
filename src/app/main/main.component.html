@@ -1,0 +1,114 @@
+
+<div class="divide">
+  <div>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="km" (ngModelChange)="kmChanged($event)" 
+    placeholder="kilometer" [(ngModel)]="kiloMeter">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput  type="text" name="m" (ngModelChange)="mtrChanged($event)" 
+    placeholder="meter" [(ngModel)]="meter">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="cm" (ngModelChange)="cmChanged($event)" 
+    placeholder="centi meter" [(ngModel)]="centiMetr">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="mm" (ngModelChange)="mmChanged($event)" 
+    placeholder="mili meter" [(ngModel)]="miliMetr">
+  </mat-form-field>
+</div>
+ <div> 
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="dm" (ngModelChange)="decaChanged($event)" 
+    placeholder="Decimetre"  [(ngModel)]="decaMetr">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="um" (ngModelChange)="microChanged($event)" 
+    placeholder="micro meter"  [(ngModel)]="microMetr">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="nm" (ngModelChange)="nanoChanged($event)" 
+    placeholder="nano meter"  [(ngModel)]="nanoMetr">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="mile" (ngModelChange)="mileChanged($event)" 
+    placeholder="mile"  [(ngModel)]="mile">
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="yd" (ngModelChange)="yardChanged($event)" 
+    placeholder="yard"  [(ngModel)]="yard">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="foot" (ngModelChange)="footChanged($event)" 
+    placeholder="foot"  [(ngModel)]="foot">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="inch" (ngModelChange)="inchChanged($event)" 
+    placeholder="inch"  [(ngModel)]="inch">
+  </mat-form-field>
+  <!-- <mat-form-field class="example-full-width">
+    <input matInput type="text" name="gj" (ngModelChange)="gajChanged($event)" 
+    placeholder="Guz"  [(ngModel)]="gajj">
+  </mat-form-field> -->
+</div>
+</div>
+
+
+<div class="divideSection">
+<div>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="sq.km" (ngModelChange)="sqkmChanged($event)" 
+    placeholder="sq. km"  [(ngModel)]="sqkilometer">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="sqm" (ngModelChange)="sqmChanged($event)" 
+    placeholder="square meter"  [(ngModel)]="sqmetr">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="sqmile" (ngModelChange)="sqmileChanged($event)" 
+    placeholder="square mile"  [(ngModel)]="sqmile">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="sqyd" (ngModelChange)="sqydChanged($event)" 
+    placeholder="Gaj or Sqaure Yard "  [(ngModel)]="sqyard">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="cm" (ngModelChange)="sqfootChanged($event)" 
+    placeholder="square foot"  [(ngModel)]="sqft">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="sqinch" (ngModelChange)="sqinchChanged($event)" 
+    placeholder="square inch"  [(ngModel)]="sqinch">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="acre" (ngModelChange)="acreChanged($event)" 
+    placeholder="acres"  [(ngModel)]="acre">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" name="hec" (ngModelChange)="hectareChanged($event)" 
+    placeholder="hectare"  [(ngModel)]="hectare">
+  </mat-form-field>
+</div>
+</div>
+
+<div class="tbl">
+    <table id="customers">
+       <tr>
+         <th>name</th>
+         <th>weight</th>
+         <th>symbol</th>
+       </tr>
+       <tr *ngFor="let i of ELEMENT_DATA">
+         <td>{{i.name}}</td>
+         <td>{{i.weight}}</td>
+         <td>{{i.symbol}}</td>
+       </tr>
+     </table>
+   </div>
+
