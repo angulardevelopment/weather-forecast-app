@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {Routes,RouterModule} from '@angular/router';
+import {Routes, RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { TechComponent } from './tech/tech.component';
 import { BiteComponent } from './bite/bite.component';
@@ -20,6 +20,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { WeightComponent } from './weight/weight.component';
+import { EssayComponent } from './essay/essay.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
+import { MessageFormComponent, MessageItemComponent, MessageListComponent } from './chatbot/components';
+import { DialogflowService } from './chatbot/services';
+import { TodoComponent } from './todo/todo.component';
+import { SearchPipe } from './pipes/search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +37,15 @@ import { WeightComponent } from './weight/weight.component';
     CurrencyComponent,
     NotFoundComponent,
     TemperatureComponent,
-    WeightComponent
+    WeightComponent,
+    EssayComponent,
+    CalculatorComponent,
+    ChatbotComponent,
+    MessageListComponent,
+    MessageFormComponent,
+    MessageItemComponent,
+    TodoComponent,
+    SearchPipe
   ],
   imports: [
     AppRoutingModule,
@@ -45,9 +60,11 @@ import { WeightComponent } from './weight/weight.component';
     MatTableModule,
     MatSelectModule,
     MatCheckboxModule
-    
+
   ],
-  providers: [],
+  providers: [
+    DialogflowService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

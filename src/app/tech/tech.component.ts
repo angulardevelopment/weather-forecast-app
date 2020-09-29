@@ -22,171 +22,30 @@ export class TechComponent implements OnInit {
     { value: 'img', viewValue: 'img' },
     { value: 'canvas', viewValue: 'canvas' },
   ];
-
-
-  ngOnInit() {
-  }
-
-
-  copyData() {
-    var copyText = (<HTMLInputElement>document.getElementById("myInput"));
-    copyText.select();
-    document.execCommand("copy");
-
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied: " + copyText.value;
-  }
-
-  outFunc() {
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copy to clipboard";
-  }
-
   someText;
   updatedText;
-  removeLinebreaks() {
-    this.updatedText = this.someText.replace(/(\r\n\t|\n|\r\t)/gm, " ");
-  }
-
   phrase;
   findPhrase;
   replacePhrase;
   finalPhrase;
-  replaceText() {
-    this.finalPhrase = this.phrase.split(this.findPhrase).join(this.replacePhrase);
-  }
-
   textData;
   finalObj;
-  WordsStatistics() {
-    var uniqueWords = this.textData.split(/\s+/).sort().filter(function (v, i, o) { return v !== o[i - 1]; });
-    var text = this.textData,
-      chars = text.length,
-      words = text.split(/\b\S+\b/g).length - 1,
-      lines = text.split("\n").length,
-      sentences = text.split(".").length;
-    var uniqueChars = this.textData.split('').filter(function (item, i, ar) { return ar.indexOf(item) === i; }).join('');
-
-    this.finalObj = "chars: " + chars + ',' + " words: " + words + ',' + " lines: " + lines + ',' + " sentences: " + sentences + ','
-      + " unique chars: " + uniqueChars;
-  }
-
   exampleString;
   finalop;
-  countChars() {
-    var stringBase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-      '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    var countObject = {};
-
-    function characterCount(word, character) {
-      var count = 0;
-      for (var i = 0; i < word.length; i++) {
-        if (word[i] === character) {
-          count++;
-        }
-      }
-      return count;
-    }
-
-    for (var i = 0, l = stringBase.length; i < l; i++) {
-      var currentChar = stringBase[i];
-      countObject[currentChar] = characterCount(this.exampleString, currentChar);
-    }
-    this.finalop = JSON.stringify(countObject);
-    console.log(countObject);
-  }
-
   sampEntries = '';
   finalValue;
   texttofind;
-  textEntries() {
-    function find_occurences(str, char_to_count) {
-      return str.split(char_to_count).length - 1;
-    }
-    this.finalValue = find_occurences(this.sampEntries, this.texttofind);
-    //or
-    // function count(string,char) {
-    //   var re = new RegExp(char,"gi");
-    //   return string.match(re).length;
-    //  }
-
-    //  var str34 = 'I will practice survival skills';
-    //  console.log(count(str34,'i'),'df');
-  }
-
   shuffledata;
   finalShuffling;
-  shufflWords() {
-    function shuffelWord(word) {
-      word = word.split('');
-
-      //Remove the first and the last letter
-      let first = word.shift();
-      let last = word.pop();
-
-      //Shuffle the remaining letters
-      for (let i = word.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [word[i], word[j]] = [word[j], word[i]];
-      }
-
-      //Append and return
-      return first + word.join("") + last;
-    }
-
-    this.finalShuffling = shuffelWord(this.shuffledata);
-    console.log(this.finalShuffling, 'cs');
-
-  }
-
   textEntriesString;
   noofSTr;
   lenStr;
   finalStr = '';
-  generateText() {
-    let text = "";
-    for (let j = 0; j < this.noofSTr; j++) {
-      text = "";
-      for (var i = 0; i < this.lenStr; i++) {
-        text += this.textEntriesString.charAt(Math.floor(Math.random() * this.textEntriesString.length));
-      }
-      this.finalStr = this.finalStr + text + ',';
-    }
-  }
-
   noFrom;
   noTo;
   entries;
-  noOutput = "";
-  randomNo() {
-    for (let i = 0; i < this.entries; i++) {
-      let c = Math.round((Math.random()) * (parseInt(this.noTo) - parseInt(this.noFrom) + 1) + parseInt(this.noFrom));
-      // if(arr.indexOf(c) === -1) arr.push(r); 
-
-      this.noOutput = this.noOutput + c + ',';
-    }
-
-  }
-
+  noOutput = '';
   myString;
-  convertData() {
-    var myString = "https://www.titanesmedellin.com/";
-    var myPassword = "myPassword";
-
-
-    // PROCESS
-    var encrypted = crypto.AES.encrypt(myString, myPassword);
-    // var decrypted = crypto.AES.decrypt(encrypted, myPassword);
-    // var encrypted = crypto.AES.encrypt("Message", "Secret Passphrase");
-    //U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=
-
-    var decrypted = crypto.AES.decrypt(encrypted, "Secret Passphrase");
-    console.log(encrypted.toString());
-    console.log(decrypted.toString());
-
-    console.log(decrypted.toString(crypto.enc.Utf8, 'vg'))
-  }
-
   elementType = 'svg';
   value = 'someValue12340987';
   format = 'CODE128';
@@ -206,7 +65,6 @@ export class TechComponent implements OnInit {
   marginBottom = 10;
   marginLeft = 10;
   marginRight = 10;
-
   get values(): string[] {
     return this.value.split('\n');
   }
@@ -221,25 +79,194 @@ export class TechComponent implements OnInit {
     'codabar'
   ];
 
+  ngOnInit() {
+  }
+
+
+  copyData() {
+    const copyText = (<HTMLInputElement>document.getElementById('myInput'));
+    copyText.select();
+    document.execCommand('copy');
+
+    const tooltip = document.getElementById('myTooltip');
+    tooltip.innerHTML = 'Copied: ' + copyText.value;
+  }
+
+  outFunc() {
+    const tooltip = document.getElementById('myTooltip');
+    tooltip.innerHTML = 'Copy to clipboard';
+  }
+
+
+  removeLinebreaks() {
+    this.updatedText = this.someText.replace(/(\r\n\t|\n|\r\t)/gm, ' ');
+  }
+
+
+  replaceText() {
+    this.finalPhrase = this.phrase.split(this.findPhrase).join(this.replacePhrase);
+  }
+
+
+  WordsStatistics() {
+    const uniqueWords = this.textData.split(/\s+/).sort().filter(function (v, i, o) { return v !== o[i - 1]; });
+    const text = this.textData,
+      chars = text.length,
+      words = text.split(/\b\S+\b/g).length - 1,
+      lines = text.split('\n').length,
+      sentences = text.split('.').length;
+    const uniqueChars = this.textData.split('').filter(function (item, i, ar) { return ar.indexOf(item) === i; }).join('');
+
+    this.finalObj = 'chars: ' + chars + ',' + ' words: ' + words + ',' + ' lines: ' + lines + ',' + ' sentences: ' + sentences + ','
+      + ' unique chars: ' + uniqueChars;
+  }
+  // <!-- Array
+  // (
+  //     [0] => xsx
+  // )
+
+  // Length: 3 characters
+  // Length witout white-space: 3 characters
+  // Lines: 1
+  // Words: 1
+  // Sentences: 1
+  // Unique words: 1
+  // Unique words(%): 100%
+  // Length of shortest word: 3 characters
+  // Length of longest word: 3 characters
+  // Avg. word length: 3
+  // Avg. words per line: 1
+  // Avg. words per sentence: 1
+
+  countChars() {
+    const stringBase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+     'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+      '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    const countObject = {};
+
+    function characterCount(word, character) {
+      let count = 0;
+      for (let i = 0; i < word.length; i++) {
+        if (word[i] === character) {
+          count++;
+        }
+      }
+      return count;
+    }
+
+    for (let i = 0, l = stringBase.length; i < l; i++) {
+      const currentChar = stringBase[i];
+      countObject[currentChar] = characterCount(this.exampleString, currentChar);
+    }
+    this.finalop = JSON.stringify(countObject);
+    console.log(countObject);
+  }
+
+
+  textEntries() {
+    function find_occurences(str, char_to_count) {
+      return str.split(char_to_count).length - 1;
+    }
+    this.finalValue = find_occurences(this.sampEntries, this.texttofind);
+    // or
+    // function count(string,char) {
+    //   var re = new RegExp(char,"gi");
+    //   return string.match(re).length;
+    //  }
+
+    //  var str34 = 'I will practice survival skills';
+    //  console.log(count(str34,'i'),'df');
+  }
+
+
+  shufflWords() {
+    function shuffelWord(word) {
+      word = word.split('');
+
+      // Remove the first and the last letter
+      const first = word.shift();
+      const last = word.pop();
+
+      // Shuffle the remaining letters
+      for (let i = word.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [word[i], word[j]] = [word[j], word[i]];
+      }
+
+      // Append and return
+      return first + word.join('') + last;
+    }
+
+    this.finalShuffling = shuffelWord(this.shuffledata);
+    console.log(this.finalShuffling, 'cs');
+
+  }
+
+
+  generateText() {
+    let text = '';
+    for (let j = 0; j < this.noofSTr; j++) {
+      text = '';
+      for (let i = 0; i < this.lenStr; i++) {
+        text += this.textEntriesString.charAt(Math.floor(Math.random() * this.textEntriesString.length));
+      }
+      this.finalStr = this.finalStr + text + ',';
+    }
+  }
+
+
+  randomNo() {
+    for (let i = 0; i < this.entries; i++) {
+      const c = Math.round((Math.random()) * (parseInt(this.noTo, 10) - parseInt(this.noFrom, 10) + 1) +
+       parseInt(this.noFrom, 10));
+      // if(arr.indexOf(c) === -1) arr.push(r);
+
+      this.noOutput = this.noOutput + c + ',';
+    }
+
+  }
+
+
+  convertData() {
+    const myString = 'https://www.titanesmedellin.com/';
+    const myPassword = 'myPassword';
+
+
+    // PROCESS
+    const encrypted = crypto.AES.encrypt(myString, myPassword);
+    // var decrypted = crypto.AES.decrypt(encrypted, myPassword);
+    // var encrypted = crypto.AES.encrypt("Message", "Secret Passphrase");
+    // U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=
+
+    const decrypted = crypto.AES.decrypt(encrypted, 'Secret Passphrase');
+    console.log(encrypted.toString());
+    console.log(decrypted.toString());
+
+    console.log(decrypted.toString(crypto.enc.Utf8, 'vg'));
+  }
+
+
+
+
   //   project for testing-
   // generate sample text file & text generator
   // input field- 1mb
-  // output - generate .txt file havinf content of 1 mb  
+  // output - generate .txt file havinf content of 1 mb
 
   demo() {
 
     function generate_random_data1(size) {
-      var chars = 'abcdefghijklmnopqrstuvwxyz'.split('');
-      var len = chars.length;
-      var random_data = [];
+      const chars = 'abcdefghijklmnopqrstuvwxyz'.split('');
+      const len = chars.length;
+      const random_data = [];
 
       while (size--) {
-        random_data.push(chars[Math.random() * len | 0]);
+        random_data.push(chars[Math.random() * len || 0]);
       }
 
       return random_data.join('');
     }
-    const blob = new Blob([generate_random_data1(parseInt('10') * 1024 * 1024)], { type: 'text/plain' });
+    const blob = new Blob([generate_random_data1(parseInt('10', 10) * 1024 * 1024)], { type: 'text/plain' });
     saveAs(blob, 'log.txt');
   }
 

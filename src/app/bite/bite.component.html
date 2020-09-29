@@ -1,47 +1,43 @@
 
+  <form [formGroup]="form">
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="terab" (ngModelChange)="teraChanged($event)" placeholder="Terabyte"
+        formControlName="terab">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="gigab" (ngModelChange)="gigaChanged($event)" placeholder="Gigabyte"
+        formControlName="gigab">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="megab" (ngModelChange)="magaChanged($event)" placeholder="Megabyte"
+        formControlName="megab">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="kilob" (ngModelChange)="kiloChanged($event)" placeholder="Kilobyte"
+        formControlName="kilob">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="byt" (ngModelChange)="bytChanged($event)" placeholder="Byte"
+        formControlName="byt">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" name="bit" (ngModelChange)="bitChanged($event)" placeholder="Bit"
+        formControlName="bit">
+    </mat-form-field>
+  </form>
 
-<div>
-    <form [formGroup]="form">
-        <mat-form-field class="example-full-width">
-            <input matInput type="text" name="terab" (ngModelChange)="teraChanged($event)" placeholder="Terabyte"
-              formControlName="terab">
-          </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" name="gigab" (ngModelChange)="gigaChanged($event)" placeholder="Gigabyte"
-      formControlName="gigab"> 
-  </mat-form-field> 
-
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" name="megab" (ngModelChange)="magaChanged($event)" placeholder="Megabyte"
-      formControlName="megab">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" name="kilob" (ngModelChange)="kiloChanged($event)" placeholder="Kilobyte"
-      formControlName="kilob">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" name="byt" (ngModelChange)="bytChanged($event)" placeholder="Byte"
-      formControlName="byt">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" name="bit" (ngModelChange)="bitChanged($event)" placeholder="Bit"
-      formControlName="bit">
-  </mat-form-field>
-</form>
-</div>
 
 <div class="tbl">
-    <table id="customers">
-       <tr>
-         <th>name</th>
-         <th>weight</th>
-         <th>symbol</th>
-       </tr>
-       <tr *ngFor="let i of ELEMENT_DATA">
-         <td>{{i.name}}</td>
-         <td>{{i.weight}}</td>
-         <td>{{i.symbol}}</td>
-       </tr>
-     </table>
-   </div>
-
+  <table id="customers">
+    <tr>
+      <th>name</th>
+      <th>weight</th>
+      <th>symbol</th>
+    </tr>
+    <tr *ngFor="let i of ELEMENT_DATA">
+      <td>{{i.name}}</td>
+      <td>{{i.weight}}</td>
+      <td>{{i.symbol}}</td>
+    </tr>
+  </table>
+</div>

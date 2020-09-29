@@ -1,5 +1,5 @@
 
-<nav [ngClass]="'parent-menu'">
+<nav [ngClass]="'parent-menu'" id="navData">
   <ul>
     <li>
       <a routerLink="/convertentries" routerLinkActive="active">Text tools</a>
@@ -20,7 +20,19 @@
 	</li>
 	<li>
 		<a routerLink="/weight" routerLinkActive="active">Weight Convertor</a>
-	  </li>
+    </li>
+    <li>
+      <a routerLink="/calculator" routerLinkActive="active">Calculator</a>
+      </li>
+      <li>
+        <a routerLink="/essayWriter" routerLinkActive="active">Essay writer</a>
+        </li>
+        <li>
+          <a routerLink="/todoList" routerLinkActive="active">To do Notes</a>
+          </li>
+        <li>
+          <a routerLink="/chatBot" routerLinkActive="active">Contact</a>
+          </li>
   </ul>
 </nav>
 
@@ -28,9 +40,9 @@
   <router-outlet></router-outlet>
 </div>
 
-<footer>
+<!-- <footer class="footer">
   <div class="dfg">
     <span>For any suggestions-</span>
-    <p>Email me: admin@steadyadvice.net</p>
+    <p>Email me: softwaredeveloper321@protonmail.com</p>
   </div>
-</footer>
+</footer> -->

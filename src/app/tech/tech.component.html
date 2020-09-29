@@ -1,4 +1,4 @@
-<!-- Random number generato -->
+
 <div class="back">
   <h2> Random number generator</h2>
   <span>Amount of numbers to be generated </span>
@@ -15,16 +15,15 @@
   </mat-form-field>
   <span>Output: </span>
   <input type="text" id="myInput" [(ngModel)]="noOutput" disabled>
-  <!-- <div class="tooltip">
+  <div class="tooltip">
     <button (click)="copyData()" (mouseout)="outFunc()">
       <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
       Copy text
       </button>
-</div> -->
+</div>
 
 </div>
 
-<!-- Random string generator -->
 <div id="top">
   <h2> Random string generator</h2>
   <span> Allowed chars: </span>
@@ -43,7 +42,6 @@
   <input type="text" id="myInput" [(ngModel)]="finalStr" disabled>
 </div>
 
-<!-- Shuffle letters -->
 <div class="back">
   <h2>Shuffle letters</h2>
   <span>Input: </span>
@@ -54,11 +52,8 @@
   <input type="text" name="" id="" [(ngModel)]="finalShuffling" disabled>
 </div>
 
-
-
-<!-- Compress text online encrypt/decrypt -->
-<!-- <div>
-  <h2>Compress text online</h2>
+<div>
+  <h2>Compress text online encrypt/decrypt</h2>
   <span>Input: </span>
   <mat-form-field class="example-full-width">
     <input matInput type="text" name="2" [(ngModel)]="myString">
@@ -73,9 +68,8 @@
     </mat-form-field>
   <br>
   <span>Output: </span>
-</div> -->
+</div>
 
-<!-- Text statistics -->
 <div>
   <h2>Text statistics generator</h2>
   <span>Input: </span>
@@ -85,28 +79,8 @@
   <span>Output: </span>
   <br>
   <textarea name="" id="" cols="30" rows="10" [(ngModel)]="finalObj"></textarea>
-
-  <!-- Array
-(
-    [0] => xsx
-)
-
-Length: 3 characters
-Length witout white-space: 3 characters
-Lines: 1
-Words: 1
-Sentences: 1
-Unique words: 1
-Unique words(%): 100%
-Length of shortest word: 3 characters
-Length of longest word: 3 characters
-Avg. word length: 3
-Avg. words per line: 1
-Avg. words per sentence: 1     -->
-
 </div>
 
-<!-- Remove line breaks  -->
 <div class="back">
   <h2>Remove line breaks online</h2>
   <span>Input: </span>
@@ -118,7 +92,6 @@ Avg. words per sentence: 1     -->
   <textarea name="" id="" cols="30" rows="10" [(ngModel)]="updatedText"></textarea>
 </div>
 
-<!-- Replace text online -->
 <div>
   <h2>Replace text online</h2>
   <span>Input data: </span>
@@ -137,7 +110,6 @@ Avg. words per sentence: 1     -->
   <button (click)="replaceText()">Replace</button>
 </div>
 
-<!-- Count characters -->
 <div class="back">
   <h2>Count characters</h2>
   <span>Input: </span>
@@ -153,7 +125,6 @@ f: 1
 s: 1 -->
 </div>
 
-<!-- Count text entries -->
 <div>
   <h2>Count text entries</h2>
   <div>
@@ -175,8 +146,7 @@ s: 1 -->
   </div>
 </div>
 
-<!-- Barcode generator -->
-<!-- <div>
+<div>
   <h2>Barcode generator</h2>
   <span>Input data: </span>
   <mat-form-field class="example-full-width">
@@ -241,4 +211,4 @@ s: 1 -->
       [bc-background]="background" [bc-margin]="margin" [bc-margin-top]="marginTop" [bc-margin-bottom]="marginBottom"
       [bc-margin-left]="marginLeft" [bc-margin-right]="marginRight"></ngx-barcode>
   </div>
-</div> -->
+</div>

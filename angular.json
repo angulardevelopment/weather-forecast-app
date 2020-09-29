@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "temp6"
+  "defaultProject": "temp6",
+  "cli": {
+    "analytics": false
+  }
 }
