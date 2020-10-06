@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -18,7 +17,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
-import { TemperatureComponent } from './temperature/temperature.component';
 import { WeightComponent } from './weight/weight.component';
 import { EssayComponent } from './essay/essay.component';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -36,7 +34,6 @@ import { SearchPipe } from './pipes/search.pipe';
     DigitComponent,
     CurrencyComponent,
     NotFoundComponent,
-    TemperatureComponent,
     WeightComponent,
     EssayComponent,
     CalculatorComponent,

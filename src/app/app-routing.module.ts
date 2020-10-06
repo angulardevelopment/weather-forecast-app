@@ -7,7 +7,6 @@ import { DigitComponent } from './digit/digit.component';
 import { CurrencyComponent } from './currency/currency.component';
 import { BiteComponent } from './bite/bite.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { TemperatureComponent } from './temperature/temperature.component';
 import { WeightComponent } from './weight/weight.component';
 import { EssayComponent } from './essay/essay.component';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -38,8 +37,8 @@ const routes: Routes = [
     },
     {
         path: 'temperature',
-        component: TemperatureComponent
-    },
+        loadChildren: () => import('./temperature/weather/weather.module').then(m => m.WeatherModule)
+      },
     {
         path: 'weight',
         component: WeightComponent
@@ -63,7 +62,7 @@ const routes: Routes = [
     {
     path: '',
     redirectTo: '/convertentries',
-    pathMatch: 'full'
+    pathMatch: 'full' // prefix
 },
     {
         path: '**',

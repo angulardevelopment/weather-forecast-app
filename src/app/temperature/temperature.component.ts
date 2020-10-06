@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UiService } from './weather/services/ui.service';
 
 @Component({
   selector: 'app-temperature',
@@ -7,19 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemperatureComponent implements OnInit {
 
-  constructor() { }
-  cels=0;
-  fahr=32;
-  ngOnInit() {
-  } 
-  celsiusChanged(newvalue){
-    let tempValue=newvalue==""?"0":newvalue;
-    this.fahr=((parseFloat(tempValue) * 9)/5) + 32
+
+
+  showMenu = false;
+  darkModeActive: boolean;
+
+  constructor(public ui: UiService) {
+
   }
 
-  fahrChanged(newvalue){    
-    let tempValue=newvalue==""?"0":newvalue;
-    this.cels=((parseFloat(tempValue) - 32) * 5)/9;
-    
+  ngOnInit() {
+    this.ui.darkModeState.subscribe((value) => {
+      this.darkModeActive = value;
+    });
+
+
   }
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  modeToggleSwitch() {
+    this.ui.darkModeState.next(!this.darkModeActive);
+  }
+
+
 }

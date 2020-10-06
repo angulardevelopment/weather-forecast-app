@@ -159,7 +159,7 @@ export class TechComponent implements OnInit {
       countObject[currentChar] = characterCount(this.exampleString, currentChar);
     }
     this.finalop = JSON.stringify(countObject);
-    console.log(countObject);
+
   }
 
 
@@ -175,7 +175,7 @@ export class TechComponent implements OnInit {
     //  }
 
     //  var str34 = 'I will practice survival skills';
-    //  console.log(count(str34,'i'),'df');
+
   }
 
 
@@ -198,7 +198,7 @@ export class TechComponent implements OnInit {
     }
 
     this.finalShuffling = shuffelWord(this.shuffledata);
-    console.log(this.finalShuffling, 'cs');
+
 
   }
 
