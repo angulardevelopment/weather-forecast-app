@@ -32,3 +32,19 @@
 
   </div>
 </div>
+
+<hr>
+
+<div>
+    <h1>To do</h1>
+    <div class="addItem">
+        <input [(ngModel)]="newItem" placeholder="AddItem" class="addText">
+        <button (click)="pushItem()">Add</button>
+    </div>
+    <ul>
+        <li *ngFor="let i of items;let ind=index">
+            {{i}}
+            <span (click)="removeItem(ind)">remove</span>
+        </li>
+    </ul>
+</div>

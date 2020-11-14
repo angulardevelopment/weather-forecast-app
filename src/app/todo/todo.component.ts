@@ -96,6 +96,17 @@ export class TodoComponent implements OnInit {
 
   }
 
+  items = ["Angular", "React"];
+  newItem = "";
+  pushItem = () => {
+    if (this.newItem != "") {
+      this.items.push(this.newItem);
+      this.newItem = "";
+    }
+  }
+  removeItem = (index) => {
+    this.items.splice(index, 1);
+  }
 }
 
 interface INoteModel {
