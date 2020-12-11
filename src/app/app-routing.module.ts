@@ -35,10 +35,10 @@ const routes: Routes = [
         path: 'techunits',
         component: BiteComponent
     },
-    {
-        path: 'temperature',
-        loadChildren: () => import('./temperature/weather/weather.module').then(m => m.WeatherModule)
-      },
+    // {
+    //     path: 'temperature',
+    //     loadChildren: () => import('./temperature/weather/weather.module').then(m => m.WeatherModule)
+    //   },
     {
         path: 'weight',
         component: WeightComponent
