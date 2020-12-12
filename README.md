@@ -23,15 +23,16 @@ For any help
 * 1 US Dollar equals  65.33 Indian Rupee
 * 1 Canadian Dollar equals 52.81 Indian Rupee
 * 1 Euro equals 77.47 Indian Rupee
-* 1 british pound is 84.20 rupee 
+* 1 british pound is 84.20 rupee `1/100=Penny Plural=pounds `
 * 1 Philippine Piso is 1.31 Indian Rupee
-`1/100=Penny Plural=pounds `
+
 
 ## Number Conversions
 
 ## Essay writer
 
 ## Measurement units or metric system
+<pre>
 In this tab you can get answer of these type of questions.
 What is 8 metres squared in length and width?
 1 Gaj or Sqaure Yard = 9 Square Feet =100 gaj = 91m or 100 Gaj = 900 Square Feet
@@ -79,6 +80,7 @@ cm -inch - feet -meter-mm-dm-km-foot-yard-furlong- mile | hectare- acres- guntha
 1 sq. yard = 0.8361 sq.metre ?
 1 sq. metre = 1.190 sq.yards ?
 1 sq. metre = 10.76 sq.feet ?
+</pre>
 ## Text tools
 
 ## Notes
