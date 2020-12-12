@@ -26,6 +26,7 @@ For any help
 * 1 british pound is 84.20 rupee `1/100=Penny Plural=pounds `
 * 1 Philippine Piso is 1.31 Indian Rupee
 
+#### https://finance.yahoo.com/currency-converter/
 
 ## Number Conversions
 
