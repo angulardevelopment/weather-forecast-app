@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="calc-body">
+    <div class="calc-screen">
+      <div class="calc-operation" *ngFor="let i of total">{{i}}	{{previous_operator}}
+        
+      </div>
+      <div class="calc-typed">{{ result }}<span class="blink-me"></span></div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button c" (click)="clearResult()">C</div>
+      <div class="button l">≠</div>
+      <div class="button l" (click)="calculate('%')">%</div>
+      <div class="button l" (click)="calculate('/')">/</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" (click)="addToCalculation('7')">7</div>
+      <div class="button" (click)="addToCalculation('8')">8</div>
+      <div class="button" (click)="addToCalculation('9')">9</div>
+      <div class="button l">x</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" (click)="addToCalculation('4')">4</div>
+      <div class="button" (click)="addToCalculation('5')">5</div>
+      <div class="button" (click)="addToCalculation('6')">6</div>
+      <div class="button l" (click)="calculate('-')">−</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" (click)="addToCalculation('1')">1</div>
+      <div class="button" (click)="addToCalculation('2')">2</div>
+      <div class="button" (click)="addToCalculation('3')">3</div>
+      <div class="button l" (click)="calculate('+')">+</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" (click)="addToCalculation('.')">.</div>
+      <div class="button" (click)="addToCalculation('0')">0</div>
+      <div class="button">
+        <</div>
+          <div class="button l" (click)="calculate('=')">=</div>
+      </div>
+    </div>
+  </div>

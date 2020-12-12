@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
-import { TechComponent } from './tech/tech.component';
-import { MainComponent } from './main/main.component';
-import { DigitComponent } from './digit/digit.component';
-import { CurrencyComponent } from './currency/currency.component';
-import { BiteComponent } from './bite/bite.component';
+import { TechComponent } from './home/tech/tech.component';
+import { MainComponent } from './home/main/main.component';
+import { DigitComponent } from './home/digit/digit.component';
+import { CurrencyComponent } from './home/currency/currency.component';
+import { BiteComponent } from './home/bite/bite.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { WeightComponent } from './weight/weight.component';
-import { EssayComponent } from './essay/essay.component';
-import { CalculatorComponent } from './calculator/calculator.component';
+import { WeightComponent } from './home/weight/weight.component';
+import { EssayComponent } from './home/essay/essay.component';
+import { CalculatorComponent } from './home/calculator/calculator.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
-import { TodoComponent } from './todo/todo.component';
+import { TodoComponent } from './home/todo/todo.component';
+import { StockComponent } from './home/stock/stock.component';
 
 
 const routes: Routes = [
@@ -32,13 +33,17 @@ const routes: Routes = [
         component: CurrencyComponent
     },
     {
+      path: 'average',
+      component: StockComponent
+  },
+    {
         path: 'techunits',
         component: BiteComponent
     },
-    // {
-    //     path: 'temperature',
-    //     loadChildren: () => import('./temperature/weather/weather.module').then(m => m.WeatherModule)
-    //   },
+    {
+        path: 'temperature',
+        loadChildren: () => import('./temperature/weather/weather.module').then(m => m.WeatherModule)
+      },
     {
         path: 'weight',
         component: WeightComponent
@@ -62,7 +67,7 @@ const routes: Routes = [
     {
     path: '',
     redirectTo: '/convertentries',
-    pathMatch: 'full' // prefix
+    pathMatch: 'full'
 },
     {
         path: '**',
@@ -73,7 +78,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes),  // optional usehash
+        RouterModule.forRoot(routes, { useHash: true }),
         CommonModule
     ],
     exports: [

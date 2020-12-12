@@ -1,30 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './home/main/main.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
-import { TechComponent } from './tech/tech.component';
-import { BiteComponent } from './bite/bite.component';
-import { DigitComponent } from './digit/digit.component';
-import { CurrencyComponent } from './currency/currency.component';
+import { TechComponent } from './home/tech/tech.component';
+import { BiteComponent } from './home/bite/bite.component';
+import { DigitComponent } from './home/digit/digit.component';
+import { CurrencyComponent } from './home/currency/currency.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxBarcodeModule } from 'ngx-barcode';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
-import { WeightComponent } from './weight/weight.component';
-import { EssayComponent } from './essay/essay.component';
-import { CalculatorComponent } from './calculator/calculator.component';
+import { WeightComponent } from './home/weight/weight.component';
+import { EssayComponent } from './home/essay/essay.component';
+import { CalculatorComponent } from './home/calculator/calculator.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { MessageFormComponent, MessageItemComponent, MessageListComponent } from './chatbot/components';
 import { DialogflowService } from './chatbot/services';
-import { TodoComponent } from './todo/todo.component';
+import { TodoComponent } from './home/todo/todo.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { StockComponent } from './home/stock/stock.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { SearchPipe } from './pipes/search.pipe';
     MessageFormComponent,
     MessageItemComponent,
     TodoComponent,
-    SearchPipe
+    SearchPipe,
+    StockComponent
   ],
   imports: [
     AppRoutingModule,
