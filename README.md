@@ -19,14 +19,14 @@ For any help
 ## calculator
 
 ## currency convertor
-1 Australian Dollar equals 51.85 Indian Rupee
+` 1 Australian Dollar equals 51.85 Indian Rupee
  1 US Dollar equals  65.33 Indian Rupee
  1 Canadian Dollar equals 52.81 Indian Rupee
  1 Euro equals 77.47 Indian Rupee
 1 british pound is 84.20 rupee 
 1 Philippine Piso is 1.31 Indian Rupee
 1/100=Penny
-Plural=pounds
+Plural=pounds `
 
 ## Number Conversions
 
