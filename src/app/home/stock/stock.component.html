@@ -1,3 +1,9 @@
-<p>
-  stock works!
-</p>
+<input type="number" [(ngModel)]="firstBuyPrice" placeholder="first price" (change)="getFirstTotal()">
+<input type="number" [(ngModel)]="firstShare" placeholder="shares" (change)="getFirstTotal()">
+<input type="text" name="" id="" disabled  [(ngModel)]="totalFirstPrice">
+
+<input type="number" [(ngModel)]="secondBuyPrice" placeholder="second price" (change)="getSecondTotal()">
+<input type="number" [(ngModel)]="secondShare"  placeholder="shares" (change)="getSecondTotal()">
+<input type="text" name="" id="" disabled  [(ngModel)]="totalSecondPrice">
+
+<input type="number" [(ngModel)]="averagePrice" disabled>
