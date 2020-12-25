@@ -18,7 +18,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import { WeightComponent } from './home/weight/weight.component';
-import { EssayComponent } from './home/essay/essay.component';
 import { CalculatorComponent } from './home/calculator/calculator.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { MessageFormComponent, MessageItemComponent, MessageListComponent } from './chatbot/components';
@@ -26,6 +25,7 @@ import { DialogflowService } from './chatbot/services';
 import { TodoComponent } from './home/todo/todo.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { StockComponent } from './home/stock/stock.component';
+import { BarcodeComponent } from './home/barcode/barcode.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +36,6 @@ import { StockComponent } from './home/stock/stock.component';
     CurrencyComponent,
     NotFoundComponent,
     WeightComponent,
-    EssayComponent,
     CalculatorComponent,
     ChatbotComponent,
     MessageListComponent,
@@ -44,7 +43,8 @@ import { StockComponent } from './home/stock/stock.component';
     MessageItemComponent,
     TodoComponent,
     SearchPipe,
-    StockComponent
+    StockComponent,
+    BarcodeComponent
   ],
   imports: [
     AppRoutingModule,

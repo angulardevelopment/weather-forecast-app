@@ -9,55 +9,56 @@ import { forkJoin, Observable } from 'rxjs';
 })
 
 export class CurrencyComponent implements OnInit {
-  public responseData1: any;
-  public responseData2: any;
-  public responseData3: any;
-  public responseData4: any;
-  public responseData5: any;
-  public responseData6: any;
-  public responseData7: any;
-  public responseData8: any;
-  public responseData9: any;
-  public responseData10: any;
-  public responseData11: any;
-  public responseData12: any;
-  public responseData13: any;
-  public responseData14: any;
-  public responseData15: any;
-  public responseData16: any;
-  public responseData17: any;
-  public responseData18: any;
-  public responseData19: any;
-  public responseData20: any;
-  public responseData21: any;
-  public responseData22: any;
-  public responseData23: any;
-  public responseData24: any;
+
+  public responseData1 = {USD_EUR: 0.819502};
+  public responseData2 = {USD_GBP: 0.736494};
+  public responseData3 = {USD_JPY: 103.472033};
+  public responseData4 = {USD_DKK: 6.098202};
+  public responseData5 = {USD_BGN: 1.606919};
+  public responseData6 = {USD_HUF: 296.906681};
+  public responseData7 = {USD_CZK: 21.501001};
+  public responseData8 = {USD_PLN: 3.70465};
+  public responseData9 = {USD_SEK: 8.252175};
+  public responseData10 = {USD_CHF: 0.89018};
+  public responseData11 = {USD_ISK: 127.769989};
+  public responseData12 = {USD_NOK: 8.618835};
+  public responseData13 = {USD_AUD: 1.314061};
+  public responseData14 = {USD_CAD: 1.28665};
+  public responseData15 = {USD_HKD: 7.753803};
+  public responseData16 = {USD_KRW: 1100.919821};
+  public responseData17 = {USD_NZD: 1.405079};
+  public responseData18 = {USD_SGD: 1.329598};
+  public responseData19 = {USD_ZAR: 14.61005};
+  public responseData20 = {USD_INR: 73.564993};
+  public responseData21 = {USD_RON: 3.9945};
+  public responseData22 = {USD_HRK: 6.191703};
+  public responseData23 = {USD_RUB: 73.681598};
+
   ELEMENT_DATA = [
     { position: 1, name: 'USD', symbol: '$' },
     { position: 2, name: 'EUR', symbol: '€' },
-    { position: 3, name: 'GBP', symbol: '£' },
+    { position: 3, name: 'GBP', symbol: '£', desc: 'great british pond' },
     { position: 4, name: 'JPY', symbol: '¥' },
-    { position: 5, name: 'DKK', symbol: 'Kr.' },
-    { position: 6, name: 'BGN', symbol: 'Лв.' },
-    { position: 1, name: 'HUF', symbol: 'Ft' },
-    { position: 2, name: 'CZK', symbol: 'Kč' },
-    { position: 3, name: 'PLN', symbol: 'zł' },
-    { position: 4, name: 'SEK', symbol: 'kr' },
-    { position: 5, name: 'CHF', symbol: 'Fr.' },
-    { position: 6, name: 'ISK', symbol: 'Íkr' },
-    { position: 1, name: 'NOK', symbol: 'kr' },
+    { position: 5, name: 'DKK', symbol: 'Kr.', desc: 'krone is the official currency of Denmark' },
+    { position: 6, name: 'BGN', symbol: 'Лв.', desc: 'The lev is the currency of Bulgaria.' },
+    { position: 1, name: 'HUF', symbol: 'Ft', desc: 'forint (sign: Ft; code: HUF) is the currency of Hungary.' },
+    { position: 2, name: 'CZK', symbol: 'Kč', desc:'The koruna (sign: Kč; code: CZK) is the currency of the Czech Republic' },
+    { position: 3, name: 'PLN', symbol: 'zł', desc:'Zloty can be abbreviated to zl though PLN, the international symbol of the Polish currency, is widely used in Poland as well.' },
+    { position: 4, name: 'SEK', symbol: 'kr', desc: 'The krona is the official currency of Sweden' },
+    { position: 5, name: 'CHF', symbol: 'Fr.', desc:' The franc is the currency and legal tender of Switzerland and Liechtenstein' },
+    { position: 6, name: 'ISK', symbol: 'Íkr', desc: 'The króna (sign: kr; code: ISK) is the currency of Iceland.' },
+    { position: 1, name: 'NOK', symbol: 'kr', desc:'The krone [ˈkruːnə] (sign: kr; code: NOK), plural kroner, is the currency of Norway' },
     { position: 2, name: 'AUD', symbol: '$' },
     { position: 3, name: 'CAD', symbol: '$' },
     { position: 4, name: 'HKD', symbol: '$' },
     { position: 5, name: 'KRW', symbol: '₩' },
     { position: 6, name: 'NZD', symbol: '$' },
     { position: 1, name: 'SGD', symbol: '$' },
-    { position: 2, name: 'ZAR', symbol: 'R' },
+    { position: 2, name: 'ZAR', symbol: 'R', desc: 'The rand (sign: R; code: ZAR) is the currency of South Africa.' },
     { position: 3, name: 'INR', symbol: '₹' },
-    { position: 4, name: 'RON', symbol: 'lei' },
-    { position: 5, name: 'HRK', symbol: 'kn' },
-    { position: 6, name: 'RUB', symbol: '₽' },
+    { position: 4, name: 'RON', symbol: 'lei', desc: 'currency of Romania' },
+    { position: 5, name: 'HRK', symbol: 'kn', desc: 'currency of Croatia' },
+    { position: 6, name: 'RUB', symbol: '₽', desc: 'The rand (sign: R; code: ZAR) is the currency of South Africa.' },
     { position: 6, name: 'TRY', symbol: '₺' },
     { position: 6, name: 'CNY', symbol: '元/¥' },
     { position: 6, name: 'IDR', symbol: 'Rp' },
@@ -155,155 +156,171 @@ export class CurrencyComponent implements OnInit {
 
   dollarChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.euro = (parseFloat(tempValue) * this.responseData1.USD_EUR);
-    this.pound = (parseFloat(tempValue) * this.responseData2.USD_GBP);
-    this.japanYen = (parseFloat(tempValue) * this.responseData3.USD_JPY);
-    this.denKrone = (parseFloat(tempValue) * this.responseData4.USD_DKK);
-    this.levBulgria = (parseFloat(tempValue) * this.responseData5.USD_BGN);
-    this.forintHungary = (parseFloat(tempValue) * this.responseData6.USD_HUF);
-    this.czechRepublc = (parseFloat(tempValue) * this.responseData7.USD_CZK);
-    this.poland = (parseFloat(tempValue) * this.responseData8.USD_PLN);
-    this.swedan = (parseFloat(tempValue) * this.responseData9.USD_SEK);
-    this.swiss = (parseFloat(tempValue) * this.responseData10.USD_CHF);
-    this.icelnd = (parseFloat(tempValue) * this.responseData11.USD_ISK);
-    this.norway = (parseFloat(tempValue) * this.responseData12.USD_NOK);
-    this.australian = (parseFloat(tempValue) * this.responseData13.USD_AUD);
-    this.canada = (parseFloat(tempValue) * this.responseData14.USD_CAD);
-    this.hongkong = (parseFloat(tempValue) * this.responseData15.USD_HKD);
-    this.korean = (parseFloat(tempValue) * this.responseData16.USD_KRW);
-    this.newzlnd = (parseFloat(tempValue) * this.responseData17.USD_NZD);
-    this.singapore = (parseFloat(tempValue) * this.responseData18.USD_SGD);
-    this.african = (parseFloat(tempValue) * this.responseData19.USD_ZAR);
-    this.indian = (parseFloat(tempValue) * this.responseData20.USD_INR);
-    this.romaniac = (parseFloat(tempValue) * this.responseData21.USD_RON);
-    this.crotia = (parseFloat(tempValue) * this.responseData22.USD_HRK);
-    this.russian = (parseFloat(tempValue) * this.responseData23.USD_RUB);
+    this.euro = this.roundValue(parseFloat(tempValue) * this.responseData1.USD_EUR);
+    this.pound = this.roundValue(parseFloat(tempValue) * this.responseData2.USD_GBP);
+    this.japanYen = this.roundValue(parseFloat(tempValue) * this.responseData3.USD_JPY);
+    this.denKrone = this.roundValue(parseFloat(tempValue) * this.responseData4.USD_DKK);
+    this.levBulgria = this.roundValue(parseFloat(tempValue) * this.responseData5.USD_BGN);
+    this.forintHungary = this.roundValue(parseFloat(tempValue) * this.responseData6.USD_HUF);
+    this.czechRepublc = this.roundValue(parseFloat(tempValue) * this.responseData7.USD_CZK);
+    this.poland = this.roundValue(parseFloat(tempValue) * this.responseData8.USD_PLN);
+    this.swedan = this.roundValue(parseFloat(tempValue) * this.responseData9.USD_SEK);
+    this.swiss = this.roundValue(parseFloat(tempValue) * this.responseData10.USD_CHF);
+    this.icelnd = this.roundValue(parseFloat(tempValue) * this.responseData11.USD_ISK);
+    this.norway = this.roundValue(parseFloat(tempValue) * this.responseData12.USD_NOK);
+    this.australian = this.roundValue(parseFloat(tempValue) * this.responseData13.USD_AUD);
+    this.canada = this.roundValue (parseFloat(tempValue) * this.responseData14.USD_CAD);
+    this.hongkong = this.roundValue(parseFloat(tempValue) * this.responseData15.USD_HKD);
+    this.korean = this.roundValue(parseFloat(tempValue) * this.responseData16.USD_KRW);
+    this.newzlnd = this.roundValue(parseFloat(tempValue) * this.responseData17.USD_NZD);
+    this.singapore = this.roundValue(parseFloat(tempValue) * this.responseData18.USD_SGD);
+    this.african = this.roundValue(parseFloat(tempValue) * this.responseData19.USD_ZAR);
+    this.indian = this.roundValue(parseFloat(tempValue) * this.responseData20.USD_INR);
+    this.romaniac = this.roundValue(parseFloat(tempValue) * this.responseData21.USD_RON);
+    this.crotia = this.roundValue(parseFloat(tempValue) * this.responseData22.USD_HRK);
+    this.russian = this.roundValue(parseFloat(tempValue) * this.responseData23.USD_RUB);
   }
 
   euroChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData1.USD_EUR);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData1.USD_EUR);
     this.dollarChanged(this.dollar);
   }
 
   pondChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData2.USD_GBP);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData2.USD_GBP);
     this.dollarChanged(this.dollar);
   }
   yenChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData3.USD_JPY);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData3.USD_JPY);
     this.dollarChanged(this.dollar);
   }
+
   kroneChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData4.USD_DKK);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData4.USD_DKK);
     this.dollarChanged(this.dollar);
   }
+
   bulgChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData5.USD_BGN);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData5.USD_BGN);
     this.dollarChanged(this.dollar);
   }
+
   hungaryChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData6.USD_HUF);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData6.USD_HUF);
     this.dollarChanged(this.dollar);
   }
+
   czechChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData7.USD_CZK);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData7.USD_CZK);
     this.dollarChanged(this.dollar);
   }
+
   polandChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData8.USD_PLN);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData8.USD_PLN);
     this.dollarChanged(this.dollar);
   }
+
   swedenChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData9.USD_SEK);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData9.USD_SEK);
     this.dollarChanged(this.dollar);
   }
+
   swissChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData10.USD_CHF);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData10.USD_CHF);
     this.dollarChanged(this.dollar);
   }
+
   icelndChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData11.USD_ISK);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData11.USD_ISK);
     this.dollarChanged(this.dollar);
   }
+
   norwayChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
     this.dollar = (parseFloat(tempValue) / this.responseData12.USD_NOK);
     this.dollarChanged(this.dollar);
   }
+
   ausChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData13.USD_AUD);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData13.USD_AUD);
     this.dollarChanged(this.dollar);
   }
+
   conadaChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
     this.dollar = (parseFloat(tempValue) / this.responseData14.USD_CAD);
     this.dollarChanged(this.dollar);
   }
+
   hongChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData15.USD_HKD);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData15.USD_HKD);
     this.dollarChanged(this.dollar);
   }
+
   koreanChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
     this.dollar = (parseFloat(tempValue) / this.responseData16.USD_KRW);
     this.dollarChanged(this.dollar);
   }
+
   newzlndChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData17.USD_NZD);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData17.USD_NZD);
     this.dollarChanged(this.dollar);
 
   }
+
   singChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData18.USD_SGD);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData18.USD_SGD);
     this.dollarChanged(this.dollar);
   }
+
   africnChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData19.USD_ZAR);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData19.USD_ZAR);
     this.dollarChanged(this.dollar);
   }
+
   INDChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData20.USD_INR);
+    this.dollar = this.roundValue((parseFloat(tempValue) / this.responseData20.USD_INR));
     this.dollarChanged(this.dollar);
   }
+
   romaniaChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData21.USD_RON);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData21.USD_RON);
     this.dollarChanged(this.dollar);
   }
+
   crotiaChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData22.USD_HRK);
+    this.dollar = this.roundValue(parseFloat(tempValue) / this.responseData22.USD_HRK);
     this.dollarChanged(this.dollar);
   }
+
   russianChanged(newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
-    this.dollar = (parseFloat(tempValue) / this.responseData23.USD_RUB);
+    this.dollar = this.roundValue((parseFloat(tempValue) / this.responseData23.USD_RUB));
     this.dollarChanged(this.dollar);
   }
 
-
-
-
-
-
-
-
+  roundValue(num) {
+    return Math.round((num + Number.EPSILON) * 100) / 100;
+  }
 
 }

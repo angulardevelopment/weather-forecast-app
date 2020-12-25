@@ -1,3 +1,4 @@
+import { BarcodeComponent } from './home/barcode/barcode.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
@@ -8,7 +9,6 @@ import { CurrencyComponent } from './home/currency/currency.component';
 import { BiteComponent } from './home/bite/bite.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { WeightComponent } from './home/weight/weight.component';
-import { EssayComponent } from './home/essay/essay.component';
 import { CalculatorComponent } from './home/calculator/calculator.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { TodoComponent } from './home/todo/todo.component';
@@ -49,10 +49,6 @@ const routes: Routes = [
         component: WeightComponent
     },
     {
-        path: 'essayWriter',
-        component: EssayComponent
-    },
-    {
         path: 'calculator',
         component: CalculatorComponent
     },
@@ -64,6 +60,10 @@ const routes: Routes = [
         path: 'todoList',
         component: TodoComponent
     },
+    {
+      path: 'barcode',
+      component: BarcodeComponent
+  },
     {
     path: '',
     redirectTo: '/convertentries',

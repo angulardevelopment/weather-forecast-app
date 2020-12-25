@@ -7,12 +7,4 @@ import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 })
 export class AppComponent {
 
-  myFunction() {
-    // var x = document.getElementById("myTopnav");
-    // if (x.className === "topnav") {
-    //   x.className += " responsive";
-    // } else {
-    //   x.className = "topnav";
-    // }
-  }
 }

@@ -1,0 +1,66 @@
+<div id="top">
+  <h2>Barcode generator</h2>
+  <span>Input data: </span>
+  <mat-form-field class="example-full-width">
+    <textarea matInput name="" id="" cols="30" rows="5" id="" placeholder="bc-value" [(ngModel)]="value"></textarea>
+  </mat-form-field>
+  <mat-form-field style="margin-left:10px">
+    <mat-select placeholder="bc-element-type" [(ngModel)]="elementType">
+      <mat-option *ngFor="let food of foods2" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field style="margin-left:10px">
+    <mat-select placeholder="bc-format" [(ngModel)]="format">
+      <mat-option *ngFor="let code of codeList" [value]="code">
+        {{code}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="bc-line-color" [(ngModel)]="lineColor">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="bc-width" [(ngModel)]="width">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="bc-height" [(ngModel)]="height">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="bc-font-options" [(ngModel)]="fontOptions">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="bc-font" [(ngModel)]="font">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="bc-text-align" [(ngModel)]="textAlign">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="bc-text-position" [(ngModel)]="textPosition">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="bc-text-margin" [(ngModel)]="textMargin">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="bc-font-size" [(ngModel)]="fontSize">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="bc-background" [(ngModel)]="background">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="bc-margin" [(ngModel)]="margin">
+  </mat-form-field>
+  <mat-checkbox class="example-margin" [(ngModel)]="displayValue">bc-display-value</mat-checkbox>
+
+  <br>
+  <span>Output:</span>
+  <div fxLayout="column">
+    <ngx-barcode *ngFor="let bcValue of values" [bc-element-type]="elementType" [bc-value]="bcValue"
+      [bc-format]="format" [bc-line-color]="lineColor" [bc-width]="width" [bc-height]="height"
+      [bc-display-value]="displayValue" [bc-font-options]="fontOptions" [bc-font]="font" [bc-text-align]="textAlign"
+      [bc-text-position]="textPosition" [bc-text-margin]="textMargin" [bc-font-size]="fontSize"
+      [bc-background]="background" [bc-margin]="margin" [bc-margin-top]="marginTop" [bc-margin-bottom]="marginBottom"
+      [bc-margin-left]="marginLeft" [bc-margin-right]="marginRight"></ngx-barcode>
+  </div>
+</div>

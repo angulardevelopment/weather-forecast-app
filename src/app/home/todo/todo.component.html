@@ -16,7 +16,7 @@
 
 
 <div class="head">
-  
+
   <div class="scroll">
       <div *ngFor="let j= index;let item of taskList|search:'title,content':searchNotes"
           [ngClass]="{'active': selectedNote == item}" (click)="selectedNote = item">
@@ -31,20 +31,4 @@
      <textarea class="textbox" type="text" [ngModel]="selectedNote.content" (ngModelChange)="selectedNote.content = $event" *ngIf="selectedNote" [disabled]="enableDisableSpan" #inputToFocus> </textarea>
 
   </div>
-</div>
-
-<hr>
-
-<div>
-    <h1>To do</h1>
-    <div class="addItem">
-        <input [(ngModel)]="newItem" placeholder="AddItem" class="addText">
-        <button (click)="pushItem()">Add</button>
-    </div>
-    <ul>
-        <li *ngFor="let i of items;let ind=index">
-            {{i}}
-            <span (click)="removeItem(ind)">remove</span>
-        </li>
-    </ul>
 </div>

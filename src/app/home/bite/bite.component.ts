@@ -90,6 +90,7 @@ export class BiteComponent implements OnInit {
       this.o = 0;
     }
   }
+
   bytChanged = ( newvalue) => {
     this.i = this.i + 1;
     if (this.i === 1) {
@@ -101,6 +102,7 @@ export class BiteComponent implements OnInit {
       this.i = 0;
     }
   }
+
   bitChanged = ( newvalue) => {
     this.p = this.p + 1;
     if (this.p === 1) {

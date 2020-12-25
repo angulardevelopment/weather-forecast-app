@@ -39,7 +39,7 @@ export class MainComponent implements OnInit {
     {position: 1, name: 'square kilometer', weight: '1000000 sq. m', symbol: 'sq. km'},
     {position: 2, name: 'square meter', weight: '1.19 sq. yd', symbol: 'sq. m'},
     {position: 3, name: 'square mile', weight: '6.941', symbol: 'sq. mile'},
-    {position: 4, name: 'square yard', weight: '9.0122', symbol: 'sq. yard'},
+    {position: 4, name: 'square yard', weight: '9.0122', symbol: 'sq. yard', desc: 'it is also called gaj'},
     {position: 5, name: 'square foot', weight: '10.811', symbol: 'sq. foot'},
     {position: 6, name: 'square inch', weight: '12.0107', symbol: 'sq. inch'},
     {position: 7, name: 'acre', weight: '14.0067', symbol: 'acre'},
@@ -157,7 +157,7 @@ footChanged( newvalue)  {
     this.sqkilometer = (parseFloat(tempValue) * (2.59));
     this.sqkmChanged(this.sqkilometer);
   }
-  // it is also called gaj
+
   sqydChanged  ( newvalue)  {
     const tempValue = newvalue === '' ? '0' : newvalue;
     this.sqkilometer = (parseFloat(tempValue) / (1.19e+6));
@@ -169,11 +169,13 @@ footChanged( newvalue)  {
     this.sqkilometer = (parseFloat(tempValue) / (1.55e+9));
     this.sqkmChanged(this.sqkilometer);
   }
+
   acreChanged ( newvalue)  {
     const tempValue = newvalue === '' ? '0' : newvalue;
     this.sqkilometer = (parseFloat(tempValue) / (247.105));
     this.sqkmChanged(this.sqkilometer);
   }
+
   hectareChanged  ( newvalue) {
     const tempValue = newvalue === '' ? '0' : newvalue;
     this.sqkilometer = (parseFloat(tempValue) / (100));

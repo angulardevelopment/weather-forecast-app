@@ -1,29 +1,29 @@
 
   <form [formGroup]="form">
-    <mat-form-field class="example-full-width">
-      <input matInput type="text" name="terab" (ngModelChange)="teraChanged($event)" placeholder="Terabyte"
+    <div class="example-full-width">Terabyte (TB)
+      <input  type="text" name="terab" (ngModelChange)="teraChanged($event)"
         formControlName="terab">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput type="text" name="gigab" (ngModelChange)="gigaChanged($event)" placeholder="Gigabyte"
+    </div>
+    <div class="example-full-width">Gigabyte (GB)
+      <input  type="text" name="gigab" (ngModelChange)="gigaChanged($event)"
         formControlName="gigab">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput type="text" name="megab" (ngModelChange)="magaChanged($event)" placeholder="Megabyte"
+    </div>
+    <div class="example-full-width">Megabyte (MB)
+      <input  type="text" name="megab" (ngModelChange)="magaChanged($event)"
         formControlName="megab">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput type="text" name="kilob" (ngModelChange)="kiloChanged($event)" placeholder="Kilobyte"
+    </div>
+    <div class="example-full-width">Kilobyte (KB)
+      <input  type="text" name="kilob" (ngModelChange)="kiloChanged($event)"
         formControlName="kilob">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput type="text" name="byt" (ngModelChange)="bytChanged($event)" placeholder="Byte"
+    </div>
+    <div class="example-full-width">Byte (B)
+      <input  type="text" name="byt" (ngModelChange)="bytChanged($event)"
         formControlName="byt">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput type="text" name="bit" (ngModelChange)="bitChanged($event)" placeholder="Bit"
+    </div>
+    <div class="example-full-width">Bit (b)
+      <input  type="text" name="bit" (ngModelChange)="bitChanged($event)"
         formControlName="bit">
-    </mat-form-field>
+    </div>
   </form>
 
 
