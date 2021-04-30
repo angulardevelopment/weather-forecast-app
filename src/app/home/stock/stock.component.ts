@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
+  // This  helps you in Trading.
+
   firstBuyPrice;
   firstShare;
   totalFirstPrice;

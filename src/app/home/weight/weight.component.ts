@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weight.component.css']
 })
 export class WeightComponent implements OnInit {
-
+  // Todo
+  // nmol to mg.
+  // how many grams of silicone in 261 cu cm?
   constructor() { }
 
   ngOnInit() {

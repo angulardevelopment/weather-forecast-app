@@ -1,22 +1,23 @@
 # product
-find what you can do new.
-[DemoApp](https://sunny7899.github.io/tools/)
+
+Technically it includes-
+lazy loading of module
+string operations
+Angular form control
+
+chatbot
+Temperature app
+Digital Storage Units app
+calculator app
+Number Conversion app
+Essay writer app (This project helps you in International exam preparation.)
+Text tools
+Notes app
+weight conversion app
+stock averaging
+Date calculator
 ## Dependencies used
 `big.js, crypto-js, file-saver, html2canvas, ngx-barcode`
-
-## Token
-In development we are using token for chatbot
-
-# Functionalities Included
-
-## Temperature
-
-## Chat Bot
-For any help
-
-## Digital Storage Units
-
-## calculator
 
 ## currency convertor
 * 1 Australian Dollar equals 51.85 Indian Rupee
@@ -25,12 +26,6 @@ For any help
 * 1 Euro equals 77.47 Indian Rupee
 * 1 british pound is 84.20 rupee `1/100=Penny Plural=pounds `
 * 1 Philippine Piso is 1.31 Indian Rupee
-
-#### https://finance.yahoo.com/currency-converter/
-
-## Number Conversions
-
-## Essay writer
 
 ## Measurement units or metric system
 <pre>
@@ -82,23 +77,9 @@ cm -inch - feet -meter-mm-dm-km-foot-yard-furlong- mile | hectare- acres- guntha
 1 sq. metre = 1.190 sq.yards ?
 1 sq. metre = 10.76 sq.feet ?
 </pre>
-## Text tools
 
-## Notes
 
-## weight conversion
-nmol to mg.
-how many grams of silicone in 261 cu cm?
 
-## stock averaging
 
-## Date calculator
-# Technical Side
 
-string operations
-Angular form control
-
-## About conversion forum 
-This project helps you in International exam preparation.
-This project helps you in Trading.
 

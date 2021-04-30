@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./barcode.component.css']
 })
 export class BarcodeComponent implements OnInit {
+// Todo add qr code Generator    also
+
+
+// A QR code (abbreviated from Quick Response Code) is the trademark for a type of matrix barcode (or 2D barcode). It was first designed in 1994 for the automotive industry in Japan. A barcode is a machine-readable optical label that includes information about the item to which it is attached.
+// Best site to create QR code of any link/Text etc.
+// www.the-qrcode-generator.com
 
   foods2: Food[] = [
     { value: 'svg', viewValue: 'svg' },
