@@ -9,7 +9,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgxBarcodeModule } from 'ngx-barcode';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -24,7 +23,7 @@ import {MatSelectModule} from '@angular/material/select';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    NgxBarcodeModule,
+    // NgxBarcodeModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,

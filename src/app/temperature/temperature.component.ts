@@ -4,7 +4,8 @@ import { UiService } from './weather/services/ui.service';
 @Component({
   selector: 'app-temperature',
   templateUrl: './temperature.component.html',
-  styleUrls: ['./temperature.component.css']
+  styleUrls: ['./temperature.component.css'],
+  standalone: false
 })
 export class TemperatureComponent implements OnInit {
 

@@ -8,7 +8,8 @@ import { WeatherService } from '../../services/weather.service';
 @Component({
   selector: 'app-weather-card',
   templateUrl: './weather-card.component.html',
-  styleUrls: ['./weather-card.component.css']
+  styleUrls: ['./weather-card.component.css'],
+  standalone: false
 })
 export class WeatherCardComponent implements OnInit {
 
