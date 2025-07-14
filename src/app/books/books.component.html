@@ -1,0 +1,9 @@
+<ul>
+  @for (book of authorsBooks; track book.id) {
+  <li>
+    <a>{{ book.title }}</a>
+  </li>
+  }@empty {
+    <span> No books found</span>
+  }
+</ul>

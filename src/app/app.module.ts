@@ -17,7 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    // AppComponent,
     NotFoundComponent,
   ],
   imports: [
@@ -38,6 +38,6 @@ import {MatSelectModule} from '@angular/material/select';
   providers: [
 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { UiService } from './weather/services/ui.service';
+
 
 @Component({
   selector: 'app-temperature',

@@ -39,6 +39,8 @@ weather app
 
 Add Temperature in both Celsius and Fahrenheit mode.
 
+ng serve -o
+
 ### Packages used
 
 

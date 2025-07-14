@@ -1,0 +1,7 @@
+<ul>
+  @for (author of authors; track author.id) {
+  <li>
+    <a [routerLink]="'/books/' + author.id">{{ author.name }}</a>
+  </li>
+  }
+</ul>
